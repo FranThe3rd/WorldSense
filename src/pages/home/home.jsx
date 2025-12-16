@@ -1,5 +1,6 @@
 import React from 'react';
 import './home.css'
+import worldMap from '../../assets/map.svg'
 
 
 export const Home = () => {
@@ -11,7 +12,14 @@ export const Home = () => {
                 <p className='caption2'>
                     World Sense is an interactive, map-based platform that brings together public data from multiple trusted sources. Explore FBI Most Wanted listings, crime statistics, and other real-world information, all visualized on a single interactive map to help you better understand what’s happening around you in real time.
                 </p>
+                <div className='home-button-div'>
+                <button className='get-started-btn'>Get Started</button>
+                <button className='signup-btn'>Sign Up</button>
+                </div>
+
             </div>
+                            <img className='home-worldmap' src={worldMap}/>
+
         </div>
     )
 }
