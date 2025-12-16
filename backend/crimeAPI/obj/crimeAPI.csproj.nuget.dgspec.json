@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/figueroaf/Desktop/worldsense/src/backend/crimeAPI/crimeAPI.csproj": {}
+    "/Users/figueroaf/Desktop/WorldSense/src/backend/crimeAPI/crimeAPI.csproj": {}
   },
   "projects": {
-    "/Users/figueroaf/Desktop/worldsense/src/backend/crimeAPI/crimeAPI.csproj": {
+    "/Users/figueroaf/Desktop/WorldSense/src/backend/crimeAPI/crimeAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/figueroaf/Desktop/worldsense/src/backend/crimeAPI/crimeAPI.csproj",
+        "projectUniqueName": "/Users/figueroaf/Desktop/WorldSense/src/backend/crimeAPI/crimeAPI.csproj",
         "projectName": "crimeAPI",
-        "projectPath": "/Users/figueroaf/Desktop/worldsense/src/backend/crimeAPI/crimeAPI.csproj",
+        "projectPath": "/Users/figueroaf/Desktop/WorldSense/src/backend/crimeAPI/crimeAPI.csproj",
         "packagesPath": "/Users/figueroaf/.nuget/packages/",
-        "outputPath": "/Users/figueroaf/Desktop/worldsense/src/backend/crimeAPI/obj/",
+        "outputPath": "/Users/figueroaf/Desktop/WorldSense/src/backend/crimeAPI/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/figueroaf/.nuget/NuGet/NuGet.Config"
