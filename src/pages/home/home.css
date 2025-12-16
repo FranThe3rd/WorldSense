@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nothing+You+Could+Do&display=swap');
+
+
+.home {
+
+}
+
+.home-text-div {
+    margin: 0 auto;
+    background-color: red;
+    width: 900px;
+}
+
+.title {
+    font-size: 40px;
+    text-align: center;
+  font-family: "Nothing You Could Do", cursive;
+          font-weight: 900;
+
+
+}
+
+.caption1 {
+    text-align: center;
+    font-size: 22px;
+      font-family: "Inter", sans-serif;
+      font-weight: 300;
+
+}
+
+.caption2 {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 16px;
+      font-family: "Inter", sans-serif;
+      font-weight: 200;
+      line-height: 1.5;
+      max-width: 800px;
+
+}
