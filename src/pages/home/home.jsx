@@ -16,8 +16,19 @@ export const Home = () => {
                 <button className='get-started-btn'>Get Started</button>
                 <button className='signup-btn'>Sign Up</button>
                 </div>
+               
 
             </div>
+
+             <div className='home-topics'>
+                    <div className='topic1'><h1>Crime Data</h1></div>
+                    <div className='topic1'><h1>FBI Most Wanted</h1></div>
+                    <div className='topic1'><h1>Electric Vehicles</h1></div>
+                    <div className='topic1'><h1>Weather Warnings</h1></div>
+
+
+
+                </div>
                             <img className='home-worldmap' src={worldMap}/>
 
         </div>
