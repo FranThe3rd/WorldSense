@@ -1,9 +1,19 @@
-import React from 'react';
 import './home.css'
 import worldMap from '../../assets/map.svg'
+import { useState } from 'react';
 
 
 export const Home = () => {
+
+    const [active,setActive] = useState(null)
+
+
+    const buttonActive = (topic) => {
+        setActive(topic);
+    };
+
+
+
     return (
         <div className='Home'>
             <div className='home-text-div'>
@@ -21,10 +31,22 @@ export const Home = () => {
             </div>
 
              <div className='home-topics'>
-                    <div className='topic1'><h1>Crime Data</h1></div>
-                    <div className='topic1'><h1>FBI Most Wanted</h1></div>
-                    <div className='topic1'><h1>Electric Vehicles</h1></div>
-                    <div className='topic1'><h1>Weather Warnings</h1></div>
+                    <button 
+                    onClick={()=>buttonActive("crime")}     
+                    className={`topic1 ${active === "crime" ? "active" : ""}`}>Crime Data</button>
+
+                    <button
+                    onClick={()=> buttonActive("fbi")}
+                    className={`topic1 ${active === "fbi" ? "active" : ""}`}><h1>FBI Most Wanted</h1></button>
+                    <button 
+                    onClick={()=> buttonActive("electric")}
+                    className={`topic1 ${active === "electric" ? "active" : ""}`}
+                    ><h1>Electric Vehicles</h1></button>
+                    <button 
+                    onClick={()=> buttonActive("weather")}
+                    className={`topic1 ${active === "weather" ? "active" : ""}`}
+
+                    ><h1>Weather Warnings</h1></button>
 
 
 

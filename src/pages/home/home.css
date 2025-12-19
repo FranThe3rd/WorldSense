@@ -89,7 +89,7 @@
 }
 
 .topic1 {
-    background-color: rgb(236, 111, 28);
+    background-color: rgb(135, 132, 129);
     text-align: center;
     height: 50px;
     font-size: 12px;
@@ -97,8 +97,14 @@
     justify-content: center;
     align-items: center;
     color: white;
-transition: all ease-in-out 0.4s;
-cursor: pointer;
+    transition: all ease-in-out 0.4s;
+    cursor: pointer;
+    border: none;
+}
+
+.active {
+        background-color: rgb(236, 111, 28);
+
 }
 
 .topic1:hover {
