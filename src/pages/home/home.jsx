@@ -1,7 +1,7 @@
 import './home.css'
 import worldMap from '../../assets/map.svg'
 import { useState } from 'react';
-import { MapPin } from 'phosphor-react';
+import { MapPin} from 'phosphor-react';
 
 
 export const Home = () => {
