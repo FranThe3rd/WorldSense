@@ -80,6 +80,7 @@ export const Home = () => {
 
 
             </div>
+
             <div className='home-image-div'>
                 {active === "crime" && (
                     <>
