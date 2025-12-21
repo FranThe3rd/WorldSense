@@ -115,12 +115,11 @@ box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 
 }
 
-.active {
+.activeTopic {
     background-color: rgb(236, 111, 28);
 }
 
-.active {
-}
+
 
 .topic1:hover {
     scale: 1.04;

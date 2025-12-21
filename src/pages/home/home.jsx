@@ -64,18 +64,18 @@ export const Home = () => {
             <div className='home-topics'>
                 <button
                     onClick={() => buttonActive("crime")}
-                    className={`topic1 ${active === "crime" ? "active" : ""}`}>Crime Data</button>
+                    className={`topic1 ${active === "crime" ? "activeTopic" : ""}`}>Crime Data</button>
 
                 <button
                     onClick={() => buttonActive("fbi")}
-                    className={`topic1 ${active === "fbi" ? "active" : ""}`}><h1>FBI Most Wanted</h1></button>
+                    className={`topic1 ${active === "fbi" ? "activeTopic" : ""}`}><h1>FBI Most Wanted</h1></button>
                 <button
                     onClick={() => buttonActive("electric")}
-                    className={`topic1 ${active === "electric" ? "active" : ""}`}
+                    className={`topic1 ${active === "electric" ? "activeTopic" : ""}`}
                 ><h1>Electric Vehicles</h1></button>
                 <button
                     onClick={() => buttonActive("weather")}
-                    className={`topic1 ${active === "weather" ? "active" : ""}`}><h1>Weather Warnings</h1></button>
+                    className={`topic1 ${active === "weather" ? "activeTopic" : ""}`}><h1>Weather Warnings</h1></button>
 
 
 
