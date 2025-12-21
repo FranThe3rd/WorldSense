@@ -27,7 +27,7 @@
 
 .caption1 {
     text-align: center;
-    font-size: clamp(12px, 3vw, 33px);
+    font-size: clamp(12px, 2vw, 33px);
 
     font-family: "Inter", sans-serif;
     font-weight: 300;
@@ -37,7 +37,7 @@
 .caption2 {
     margin: 0 auto;
     text-align: center;
-    font-size: clamp(8px, 3vw, 20px);
+    font-size: clamp(8px, 1.2vw, 20px);
     font-family: "Inter", sans-serif;
     font-weight: 200;
     line-height: 1.5;
@@ -61,7 +61,7 @@
     color: white;
     font-family: "Poppins", sans-serif;
     border-radius: 5px;
-    font-size: 18px;
+    font-size: clamp(12px, 2vw, 18px);
     font-weight: bolder;
     box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
     
@@ -78,7 +78,7 @@ cursor:pointer;
     color: rgb(0, 0, 0);
     font-family: "Poppins", sans-serif;
     border-radius: 5px;
-    font-size: 18px;
+    font-size: clamp(12px, 2vw, 18px);
     box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
     font-weight: 200;
 cursor:pointer;
@@ -282,14 +282,29 @@ margin-top: 50px
   .home-topics {
     grid-template-columns: 1fr 1fr;
   }
-}
 
+  .topic1 {
+    box-shadow: none;
+    width: 90%;
+    margin: 0 auto;
+  }
 
-@media screen and (max-width: 768px) {
   .home-topics {
   grid-template-columns: 1fr;
   }
+
+  .get-started-btn {
+    width: 150px;
+  }
+
+  .signup-btn {
+    width: 150px;
+  }
+
+
 }
+
+
 
 
 /*I am going to add some keyframes animations here*/

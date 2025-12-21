@@ -114,6 +114,10 @@
 }
 
 @media screen and (max-width: 960px) {
+
+  .navbar {
+    background-color: white;
+  }
   .nav-menu {
     display: flex;
     flex-direction: column;
