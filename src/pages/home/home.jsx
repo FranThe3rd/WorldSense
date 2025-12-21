@@ -64,7 +64,7 @@ export const Home = () => {
             <div className='home-topics'>
                 <button
                     onClick={() => buttonActive("crime")}
-                    className={`topic1 ${active === "crime" ? "activeTopic" : ""}`}>Crime Data</button>
+                    className={`topic1 ${active === "crime" ? "activeTopic" : ""}`}><h1>Crime Data</h1></button>
 
                 <button
                     onClick={() => buttonActive("fbi")}

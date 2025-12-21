@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 import { CodeIcon, HamburgetMenuClose, HamburgetMenuOpen } from "./Icons";
+import logo from '../../assets/logo.png'
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -12,11 +13,9 @@ function Navbar() {
       <nav className="navbar">
         <div className="nav-container">
           <NavLink exact to="/" className="nav-logo">
-            <span>CodeBucks</span>
+            <span className="nav-title">WorldSense</span>
             {/* <i className="fas fa-code"></i> */}
-            <span className="icon">
-              <CodeIcon />
-            </span>
+            <img className="icon" src={logo} alt="" />
           </NavLink>
 
           <ul className={click ? "nav-menu active" : "nav-menu"}>
