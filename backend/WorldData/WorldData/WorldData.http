@@ -1,0 +1,6 @@
+@WorldData_HostAddress = http://localhost:5293
+
+GET {{WorldData_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
