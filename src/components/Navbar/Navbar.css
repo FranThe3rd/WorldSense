@@ -10,16 +10,18 @@
 
 .nav-title {
   font-size: 24px;
+      font-family: "Nothing You Could Do", cursive;
+
 }
 
 
 .navbar {
-  background-color: #ffffff73;
-  height: 80px;
+  background-color: #ffffff;
+  height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   position: sticky;
   top: 0;
   z-index: 20;
@@ -54,8 +56,8 @@
   width: 3rem;
   height: 3rem;
   margin-left: 16px;
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
 }
 
 
@@ -94,12 +96,12 @@
 
 .nav-item:hover:after {
   width: 100%;
-  background: #000000;
+  color: #eee7e75f;
 }
 
 .nav-item .active {
-  color: #000000;
-  border: 1px solid #000000;
+  color: #c67c14;
+
 }
 
 .nav-icon {
