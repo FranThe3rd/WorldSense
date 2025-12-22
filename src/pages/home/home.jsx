@@ -3,11 +3,12 @@ import worldMap from '../../assets/map.svg'
 import { useState } from 'react';
 import { MapPin } from 'phosphor-react';
 import { easeInOut, motion } from "motion/react"
-
+import { useNavigate } from 'react-router-dom';
 export const Home = () => {
 
+    const navigate = useNavigate();
+
     const [active, setActive] = useState(null)
-    const [pins, setPins] = useState(null)
 
 
     const buttonActive = (topic) => {
@@ -48,12 +49,13 @@ export const Home = () => {
                         className='get-started-btn'
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.8 }}
-
+                        onClick={()=> navigate('map-page')}
                     >Get Started</motion.button>
                     <motion.button
                         className='signup-btn'
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.8 }}
+                       
 
                     >Sign Up</motion.button>
                 </motion.div>
