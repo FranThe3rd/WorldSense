@@ -17,7 +17,7 @@
 
 .navbar {
   background-color: #ffffff;
-  height: 60px;
+  height: 65px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -70,7 +70,7 @@
 }
 
 .nav-links {
-  color: #000000;
+    color: #110f0f9d;
   text-decoration: none;
   padding: 0.5rem 1rem;
   height: 100%;
@@ -100,7 +100,9 @@
 }
 
 .nav-item .active {
-  color: #c67c14;
+    color: #0c0c0c;
+
+  transition: all ease-in-out 0.3s;
 
 }
 
@@ -132,6 +134,7 @@
     transition: all 0.5s ease;
     justify-content: center;
     align-items: center;
+    margin-top: 0px;
   }
 
   .nav-menu.active {
@@ -140,6 +143,7 @@
     opacity: 1;
     transition: all 0.5s ease;
     z-index: 1;
+    margin-top: -11px;
   }
   .nav-item .active {
     font-weight: bolder;
