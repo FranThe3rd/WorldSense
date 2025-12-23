@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\franc\\OneDrive\\Documents\\IMPORTANT\\WorldSense\\backend\\WorldData\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0A81E7AE-46F9-4E52-A5B3-430918873E2B}|WorldData\\WorldData.csproj|c:\\users\\franc\\onedrive\\documents\\important\\worldsense\\backend\\worlddata\\worlddata\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0A81E7AE-46F9-4E52-A5B3-430918873E2B}|WorldData\\WorldData.csproj|solutionrelative:worlddata\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0A81E7AE-46F9-4E52-A5B3-430918873E2B}|WorldData\\WorldData.csproj|c:\\users\\franc\\onedrive\\documents\\important\\worldsense\\backend\\worlddata\\worlddata\\models\\crimedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A81E7AE-46F9-4E52-A5B3-430918873E2B}|WorldData\\WorldData.csproj|solutionrelative:worlddata\\models\\crimedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A81E7AE-46F9-4E52-A5B3-430918873E2B}|WorldData\\WorldData.csproj|c:\\users\\franc\\onedrive\\documents\\important\\worldsense\\backend\\worlddata\\worlddata\\models\\electricvehiclepopulationdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A81E7AE-46F9-4E52-A5B3-430918873E2B}|WorldData\\WorldData.csproj|solutionrelative:worlddata\\models\\electricvehiclepopulationdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A81E7AE-46F9-4E52-A5B3-430918873E2B}|WorldData\\WorldData.csproj|c:\\users\\franc\\onedrive\\documents\\important\\worldsense\\backend\\worlddata\\worlddata\\models\\restaurants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A81E7AE-46F9-4E52-A5B3-430918873E2B}|WorldData\\WorldData.csproj|solutionrelative:worlddata\\models\\restaurants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A81E7AE-46F9-4E52-A5B3-430918873E2B}|WorldData\\WorldData.csproj|c:\\users\\franc\\onedrive\\documents\\important\\worldsense\\backend\\worlddata\\worlddata\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A81E7AE-46F9-4E52-A5B3-430918873E2B}|WorldData\\WorldData.csproj|solutionrelative:worlddata\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,19 +26,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "WeatherForecast.cs",
-              "DocumentMoniker": "C:\\Users\\franc\\OneDrive\\Documents\\IMPORTANT\\WorldSense\\backend\\WorldData\\WorldData\\WeatherForecast.cs",
-              "RelativeDocumentMoniker": "WorldData\\WeatherForecast.cs",
-              "ToolTip": "C:\\Users\\franc\\OneDrive\\Documents\\IMPORTANT\\WorldSense\\backend\\WorldData\\WorldData\\WeatherForecast.cs",
-              "RelativeToolTip": "WorldData\\WeatherForecast.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "ElectricVehiclePopulationData.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\OneDrive\\Documents\\IMPORTANT\\WorldSense\\backend\\WorldData\\WorldData\\Models\\ElectricVehiclePopulationData.cs",
+              "RelativeDocumentMoniker": "WorldData\\Models\\ElectricVehiclePopulationData.cs",
+              "ToolTip": "C:\\Users\\franc\\OneDrive\\Documents\\IMPORTANT\\WorldSense\\backend\\WorldData\\WorldData\\Models\\ElectricVehiclePopulationData.cs",
+              "RelativeToolTip": "WorldData\\Models\\ElectricVehiclePopulationData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-21T01:01:42.499Z",
+              "WhenOpened": "2025-12-23T17:45:16.302Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CrimeData.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\OneDrive\\Documents\\IMPORTANT\\WorldSense\\backend\\WorldData\\WorldData\\Models\\CrimeData.cs",
+              "RelativeDocumentMoniker": "WorldData\\Models\\CrimeData.cs",
+              "ToolTip": "C:\\Users\\franc\\OneDrive\\Documents\\IMPORTANT\\WorldSense\\backend\\WorldData\\WorldData\\Models\\CrimeData.cs",
+              "RelativeToolTip": "WorldData\\Models\\CrimeData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-23T17:43:36.353Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Restaurants.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\OneDrive\\Documents\\IMPORTANT\\WorldSense\\backend\\WorldData\\WorldData\\Models\\Restaurants.cs",
+              "RelativeDocumentMoniker": "WorldData\\Models\\Restaurants.cs",
+              "ToolTip": "C:\\Users\\franc\\OneDrive\\Documents\\IMPORTANT\\WorldSense\\backend\\WorldData\\WorldData\\Models\\Restaurants.cs",
+              "RelativeToolTip": "WorldData\\Models\\Restaurants.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-23T17:37:52.205Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\OneDrive\\Documents\\IMPORTANT\\WorldSense\\backend\\WorldData\\WorldData\\Program.cs",
+              "RelativeDocumentMoniker": "WorldData\\Program.cs",
+              "ToolTip": "C:\\Users\\franc\\OneDrive\\Documents\\IMPORTANT\\WorldSense\\backend\\WorldData\\WorldData\\Program.cs",
+              "RelativeToolTip": "WorldData\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-23T17:31:58.606Z",
               "EditorCaption": ""
             }
           ]
