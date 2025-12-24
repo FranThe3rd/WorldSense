@@ -17,7 +17,7 @@
 }
 
 .title {
-    font-size: clamp(24px, 5vw, 55px);
+    font-size: clamp(24px, 5vw, 60px);
     text-align: center;
     font-family: "Nothing You Could Do", cursive;
     font-weight: 900;
@@ -27,7 +27,7 @@
 
 .caption1 {
     text-align: center;
-    font-size: clamp(12px, 2vw, 33px);
+    font-size: clamp(12px, 2vw, 25px);
 
     font-family: "Inter", sans-serif;
     font-weight: 300;
@@ -37,11 +37,11 @@
 .caption2 {
     margin: 0 auto;
     text-align: center;
-    font-size: clamp(8px, 1.2vw, 20px);
+    font-size: clamp(8px, 1.2vw, 18px);
     font-family: "Inter", sans-serif;
     font-weight: 200;
     line-height: 1.5;
-    max-width: 800px;
+    max-width: 900px;
 
 }
 
@@ -128,7 +128,7 @@ box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 .topic1 h1 {
     font-family: "Poppins", sans-serif;
     font-weight: 300;
-    font-size: 18px;
+    font-size: clamp(9px, 3vw, 15px);
 
 
 }
