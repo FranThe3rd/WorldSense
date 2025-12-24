@@ -13,7 +13,7 @@ namespace WorldData.Models
         [Column("Id")]
         public int Id { get; set; }  
 
-        [Column("VIN")]
+        [Column("VIN (1-10)")]
         public string Vin { get; set; } = string.Empty;
 
         [Column("County")]
