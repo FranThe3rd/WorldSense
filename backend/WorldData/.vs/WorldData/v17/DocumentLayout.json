@@ -56,7 +56,7 @@
               "RelativeDocumentMoniker": "WorldData\\Program.cs",
               "ToolTip": "C:\\Users\\franc\\OneDrive\\Documents\\IMPORTANT\\WorldSense\\backend\\WorldData\\WorldData\\Program.cs",
               "RelativeToolTip": "WorldData\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-24T05:00:59.313Z",
               "EditorCaption": ""
@@ -71,8 +71,7 @@
               "RelativeToolTip": "WorldData\\Models\\CrimeData.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-24T04:52:46.108Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-24T04:52:46.108Z"
             },
             {
               "$type": "Document",
@@ -84,8 +83,7 @@
               "RelativeToolTip": "WorldData\\Controllers\\ElectricVehiclesController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-24T04:49:55.013Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-24T04:49:55.013Z"
             },
             {
               "$type": "Document",
@@ -97,8 +95,7 @@
               "RelativeToolTip": "WorldData\\Data\\APIContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-24T04:45:06.783Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-24T04:45:06.783Z"
             },
             {
               "$type": "Document",
@@ -110,8 +107,7 @@
               "RelativeToolTip": "WorldData\\Controllers\\RestaurantController.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAQwAcAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-24T04:44:51.844Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-24T04:44:51.844Z"
             },
             {
               "$type": "Document",
@@ -123,8 +119,7 @@
               "RelativeToolTip": "WorldData\\Models\\Restaurants.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAoAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-24T04:15:57.61Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-24T04:15:57.61Z"
             },
             {
               "$type": "Document",
@@ -136,8 +131,7 @@
               "RelativeToolTip": "WorldData\\Controllers\\CrimeController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-24T03:33:58.541Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-24T03:33:58.541Z"
             },
             {
               "$type": "Document",
@@ -149,8 +143,7 @@
               "RelativeToolTip": "WorldData\\Models\\ElectricVehiclePopulationData.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-24T04:52:10.937Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-24T04:52:10.937Z"
             },
             {
               "$type": "Document",
@@ -162,8 +155,7 @@
               "RelativeToolTip": "WorldData\\WorldData.http",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2025-12-24T04:47:19.642Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-24T04:47:19.642Z"
             }
           ]
         }

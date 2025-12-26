@@ -1,0 +1,23 @@
+.map-sidebar {
+  margin-top: 65px;
+  background-color: #FAF9F6;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 27%;
+  height: 100vh;
+  z-index: 1;
+}
+
+.searchInput {
+display: block;
+  width: 93%;
+  height: 40px;
+margin: 0 auto;
+margin-top: 40px;
+border: none;
+background-color: #F8F8FF;
+
+
+
+}
