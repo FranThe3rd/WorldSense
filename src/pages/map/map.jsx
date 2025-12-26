@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect,useState } from 'react'
 import maplibregl from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import './map.css'
@@ -8,6 +8,20 @@ import CrimeCard from '../../components/CrimeCard/CrimeCard';
 
 
 const Map = () => {
+
+  const [apiData,setData] = useState([])
+
+
+
+
+
+
+
+
+
+
+
+
 
   // This function called getData() just allows me to fetch my data from my own api that was created with .NET
   async function getData() {
@@ -19,7 +33,9 @@ const Map = () => {
     }
 
     const result = await response.json();
-    console.log(result);
+    console.log(result)
+    setData(result)
+    console.log("My data array" , apiData)
   } catch (error) {
     console.error(error.message);
   }
@@ -59,17 +75,23 @@ const Map = () => {
         <div className='map-display-info'>
           test
         </div>
+<div className="map-page-buttons">
 
+          <button className="left-button">Left</button>
+          <button className="right-button">Right</button>
+        </div>
         <div className='display-cards-grid' > 
 
+          {apiData.map((item)=> (
+          
           <CrimeCard
             className="crime-card"
-            subject="Bob The Builder Robbed You"
-            location="ur mama house"
-            date="Happened yesterday at ur butcheeks location"
+            subject={item.crimeCodeDesc}
+            location={item.location}
+            date={item.dateOccurred}
           />
+          ))}
 
-          
          
 
         </div>

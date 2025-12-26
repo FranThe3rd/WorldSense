@@ -57,6 +57,7 @@ border: none;
   grid-template-columns: repeat(1, 1fr);
   gap: 10px;
   width: 100%;
+  background-color:red;
 }
 
 .crime-card {
@@ -64,10 +65,11 @@ border: none;
   width: 95%;
   margin: 0 auto;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   border-top: solid 1px rgba(0, 0, 0, 0.158);
   border-bottom: solid 1px rgba(0, 0, 0, 0.158);
   background-color: #ffffffc5;
+  padding: 10px;
 
 }
 
