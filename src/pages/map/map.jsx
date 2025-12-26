@@ -2,6 +2,8 @@ import React, { useEffect } from 'react'
 import maplibregl from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import './map.css'
+import { MagnifyingGlass } from 'phosphor-react';
+import CrimeCard from '../../components/CrimeCard/CrimeCard';
 
 
 
@@ -49,7 +51,28 @@ const Map = () => {
 
         <div id="map" style={{ width: "100%", height: "100vh" }}></div>
       <div className="map-sidebar">
-        <input className="searchInput" type="text" name="" value=""/>
+        <div className='map-input-div'>
+          <MagnifyingGlass/>
+          <input className="searchInput" type="text" placeholder='Search for crime information here'/>
+        </div>
+
+        <div className='map-display-info'>
+          test
+        </div>
+
+        <div className='display-cards-grid' > 
+
+          <CrimeCard
+            className="crime-card"
+            subject="Bob The Builder Robbed You"
+            location="ur mama house"
+            date="Happened yesterday at ur butcheeks location"
+          />
+
+          
+         
+
+        </div>
       </div>
 
       
