@@ -2,23 +2,15 @@ import React, { useEffect,useState } from 'react'
 import maplibregl from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import './map.css'
-import { MagnifyingGlass } from 'phosphor-react';
+import { MagnifyingGlass,ArrowLeft,ArrowRight } from 'phosphor-react';
 import CrimeCard from '../../components/CrimeCard/CrimeCard';
-
+import ArtificialButton from '../../components/ArtificalButton/ArtificialButton';
+import DropDownButton from '../../components/DropDownButton/DropDownButton';
 
 
 const Map = () => {
 
   const [apiData,setData] = useState([])
-
-
-
-
-
-
-
-
-
 
 
 
@@ -64,6 +56,7 @@ const Map = () => {
 
   return (
     <div className='map-page'>
+      <DropDownButton/>
 
         <div id="map" style={{ width: "100%", height: "100vh" }}></div>
       <div className="map-sidebar">
@@ -73,13 +66,13 @@ const Map = () => {
         </div>
 
         <div className='map-display-info'>
-          test
+          <div className='display-button-div'><ArtificialButton/></div>
         </div>
-<div className="map-page-buttons">
+    <div className="map-page-buttons">
 
-          <button className="left-button">Left</button>
-          <button className="right-button">Right</button>
-        </div>
+          <button className="left-button"><ArrowLeft color='white'/></button>
+          <button className="right-button"><ArrowRight color='white'/></button>
+    </div>
         <div className='display-cards-grid' > 
 
           {apiData.map((item)=> (
@@ -91,6 +84,48 @@ const Map = () => {
             date={item.dateOccurred}
           />
           ))}
+    <CrimeCard
+            className="crime-card"
+            subject="test"
+            location="test"
+            date="test"
+          />
+
+          <CrimeCard
+            className="crime-card"
+            subject="test"
+            location="test"
+            date="test"
+          /><CrimeCard
+            className="crime-card"
+            subject="test"
+            location="test"
+            date="test"
+          /><CrimeCard
+            className="crime-card"
+            subject="test"
+            location="test"
+            date="test"
+          />
+          <CrimeCard
+            className="crime-card"
+            subject="test"
+            location="test"
+            date="test"
+          />
+          <CrimeCard
+            className="crime-card"
+            subject="test"
+            location="test"
+            date="test"
+          />
+          <CrimeCard
+            className="crime-card"
+            subject="test"
+            location="test"
+            date="test"
+          />
+          
 
          
 
