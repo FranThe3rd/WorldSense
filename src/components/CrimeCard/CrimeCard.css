@@ -1,6 +1,4 @@
-.crime-card-subject {
-  background-color: red;
-}
+
 
 .crime-card-subject h1 {
   font-size: 16px;
@@ -11,11 +9,9 @@
 }
 
 .crime-card-date {
-  background-color: green;
 }
 
 .crime-card-date p {
-  background-color: green;
     font-size: 12px;
 
 }
