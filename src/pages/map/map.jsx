@@ -6,11 +6,31 @@ import { MagnifyingGlass,ArrowLeft,ArrowRight } from 'phosphor-react';
 import CrimeCard from '../../components/CrimeCard/CrimeCard';
 import ArtificialButton from '../../components/ArtificalButton/ArtificialButton';
 import DropDownButton from '../../components/DropDownButton/DropDownButton';
-
+import { GoogleGenAI } from "@google/genai";
 
 const Map = () => {
 
   const [apiData,setData] = useState([])
+  const [displayData,setDisplayData] = useState({})
+  const [artificialExplanation,setArtificialExplanation] = useState("")
+  const [showInfo,setShowInfo] = useState(false)
+
+
+
+// This a function that simply generates content from google's LLM in order to display content
+  const geminiKey = String(process.env.REACT_APP_GEMINI_KEY)
+
+const ai = new GoogleGenAI({ apiKey: geminiKey });
+
+async function main() {
+  const response = await ai.models.generateContent({
+    model: "gemini-2.5-flash",
+    contents: `Give detailed information as a ai analyzer, zero pleasantries on this information, data: ${JSON.stringify(displayData)}`,
+
+  });
+  console.log(response.text);
+  setArtificialExplanation(response.text);
+}
 
 
 
@@ -54,6 +74,11 @@ const Map = () => {
   },[])
 
 
+  useEffect(()=> {
+    console.log(showInfo)
+  },[showInfo])
+
+
   return (
     <div className='map-page'>
       <DropDownButton/>
@@ -66,7 +91,21 @@ const Map = () => {
         </div>
 
         <div className='map-display-info'>
-          <div className='display-button-div'><ArtificialButton/></div>
+          <div className='display-button-div'><ArtificialButton onClick={()=>{setShowInfo(true);main()}}/></div>
+          <div className="display-information">
+            <ul>
+{
+  !showInfo ? 
+    Object.entries(displayData).map(([key,value])=> (
+      <li key={key}>
+        {key} : {value}
+      </li>
+    ))
+  :
+    <li>{artificialExplanation}</li>
+}
+</ul>          </div>
+
         </div>
     <div className="map-page-buttons">
 
@@ -75,58 +114,17 @@ const Map = () => {
     </div>
         <div className='display-cards-grid' > 
 
-          {apiData.map((item)=> (
+          {apiData.map((item,index)=> (
           
           <CrimeCard
+            key={item.index}
             className="crime-card"
             subject={item.crimeCodeDesc}
             location={item.location}
             date={item.dateOccurred}
+            onClick={()=>{setDisplayData(item);setShowInfo(false)}}
           />
           ))}
-    <CrimeCard
-            className="crime-card"
-            subject="test"
-            location="test"
-            date="test"
-          />
-
-          <CrimeCard
-            className="crime-card"
-            subject="test"
-            location="test"
-            date="test"
-          /><CrimeCard
-            className="crime-card"
-            subject="test"
-            location="test"
-            date="test"
-          /><CrimeCard
-            className="crime-card"
-            subject="test"
-            location="test"
-            date="test"
-          />
-          <CrimeCard
-            className="crime-card"
-            subject="test"
-            location="test"
-            date="test"
-          />
-          <CrimeCard
-            className="crime-card"
-            subject="test"
-            location="test"
-            date="test"
-          />
-          <CrimeCard
-            className="crime-card"
-            subject="test"
-            location="test"
-            date="test"
-          />
-          
-
          
 
         </div>

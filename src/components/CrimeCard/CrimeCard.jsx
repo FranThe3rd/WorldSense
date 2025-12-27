@@ -3,7 +3,7 @@ import './CrimeCard.css'
 
 const CrimeCard = (props) => {
   return (
-    <div className={props.className}>
+    <div key={props.key} className={props.className} onClick={props.onClick}>
             <div className='crime-card-subject'> 
               <h1>{props.subject}</h1>
               <p>{props.location}</p>

@@ -1,9 +1,9 @@
 import React from 'react'
 import './ArtificialButton.css'
 import { Robot } from 'phosphor-react'
-const ArtificialButton = () => {
+const ArtificialButton = (props) => {
   return (
-    <label className="switch">
+    <label className="switch" onClick={props.onClick}>
   <input type="checkbox" />
   <span className="slider">
     <div className="fug">
