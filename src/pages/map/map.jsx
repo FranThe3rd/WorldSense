@@ -24,7 +24,7 @@ const ai = new GoogleGenAI({ apiKey: geminiKey });
 
 async function main() {
   const response = await ai.models.generateContent({
-    model: "gemini-2.5-flash",
+    model: "gemini-2.5-flash-lite",
     contents: `Give detailed information as a ai analyzer, zero pleasantries on this information, data: ${JSON.stringify(displayData)}`,
 
   });
@@ -79,6 +79,13 @@ async function main() {
   },[showInfo])
 
 
+  const backToFalse = () => {
+    if (showInfo) {
+      return false;
+    }
+  }
+
+
   return (
     <div className='map-page'>
       <DropDownButton/>
@@ -91,7 +98,7 @@ async function main() {
         </div>
 
         <div className='map-display-info'>
-          <div className='display-button-div'><ArtificialButton onClick={()=>{setShowInfo(true);main()}}/></div>
+          <div className='display-button-div'><ArtificialButton onClick={()=>{setShowInfo(backToFalse());main()}}/></div>
           <div className="display-information">
             <ul>
 {

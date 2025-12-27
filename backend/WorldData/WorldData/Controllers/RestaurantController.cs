@@ -25,7 +25,7 @@ namespace WorldData.Controllers {
 
         [HttpGet] // This had to be paginated since my database had too many rows, so I couldn't display all of the information which sucks, but it is what it is.
 
-        public async Task<ActionResult<IEnumerable<Restaurants>>> GetAllRestaurantsData(int page = 1, int pageSize = 10000) 
+        public async Task<ActionResult<IEnumerable<Restaurants>>> GetAllRestaurantsData(int page = 1, int pageSize = 500) 
         {
             var data = await _context.RestaurantTable
                 .Skip((page - 1) * pageSize)
