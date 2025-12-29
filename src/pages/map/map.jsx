@@ -59,35 +59,6 @@ const Map = () => {
   }
 
 
-  // This useEffect just initializes the MapLibre, by using their free open-source api
-
-  const mapRef = useRef(null);
-  const mapInstanceRef = useRef(null);
-
-  useEffect(() => {
-    if (!mapInstanceRef.current) {
-      mapInstanceRef.current = new maplibregl.Map({
-        container: mapRef.current,
-        style: 'https://tiles.openfreemap.org/styles/bright',
-        center: [0, 0],
-        zoom: 1.5
-      });
-    }
-  }, []);
-
-  // This useEffect adds a marker from the longitude and latitude from my api.
-
-  useEffect(() => {
-    if (!mapInstanceRef.current || !apiData) return;
-
-    apiData.forEach((item) => {
-      if (item.longitude && item.latitude) {
-        new maplibregl.Marker()
-          .setLngLat([Number(item.longitude), Number(item.latitude)])
-          .addTo(mapInstanceRef.current);
-      }
-    });
-  }, [apiData]);
 
 
   // This just allows me to use the async function that is currently fetching for my data.
@@ -116,7 +87,6 @@ const Map = () => {
     <div className='map-page'>
       <DropDownButton/>
 
-      <div id="map" ref={mapRef} style={{ width: "100%", height: "100vh" }}></div>
       <div className="map-sidebar">
         <div className='map-input-div'>
           <MagnifyingGlass/>
