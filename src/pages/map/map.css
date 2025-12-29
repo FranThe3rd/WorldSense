@@ -72,10 +72,26 @@ border: none;
   margin: 0 auto;
 }
 
+.data-card {
+  gap: 1100px;
+  width:100%;
+  margin: 0 auto;
+  margin-top: 20px;
+  background-color: #CC7722;
+  color: white;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  padding: 5px;
+
+}
+
 
 .map-page-buttons {
   display: flex;
-  width: 300px;
+  width: fit-content;
   margin: 0 auto;
     margin-top: 20px;
 
@@ -106,6 +122,15 @@ border: none;
   scale: 0.9;
     transition: all ease-in-out 0.05s;
 
+}
+
+.map-page-buttons input {
+height: 40px;
+width: 120px;
+padding-left: 10px;
+border: none  ;
+
+border-radius: 10px
 }
 
 

@@ -3,8 +3,8 @@ import './ArtificialButton.css'
 import { Robot } from 'phosphor-react'
 const ArtificialButton = (props) => {
   return (
-    <label className="switch" onClick={props.onClick}>
-  <input type="checkbox" />
+    <label className="switch">
+  <input type="checkbox"  onChange={props.onClick} checked={props.checked}/>
   <span className="slider">
     <div className="fug">
       <Robot className='nav bi bi-rocket-takeoff-fill' color='white'/>
