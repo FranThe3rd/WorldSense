@@ -10,8 +10,7 @@
   width: 33%;
   height: 100%;
   z-index: 1;
-  overflow-y: scroll; 
-
+  overflow-y: scroll;
   font-family: "Inter", sans-serif;
 }
 

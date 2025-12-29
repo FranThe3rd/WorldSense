@@ -1,5 +1,5 @@
 import React, { useEffect,useState,useRef} from 'react'
-import maplibregl from 'maplibre-gl';
+import Map from 'react-map-gl/maplibre';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import './map.css'
 import { MagnifyingGlass,ArrowLeft,ArrowRight } from 'phosphor-react';
@@ -8,7 +8,8 @@ import ArtificialButton from '../../components/ArtificalButton/ArtificialButton'
 import DropDownButton from '../../components/DropDownButton/DropDownButton';
 import { GoogleGenAI } from "@google/genai";
 import Markdown from 'react-markdown'
-const Map = () => {
+import {DeckGL} from '@deck.gl/react';
+const MapPage = () => {
 
   const [apiData,setData] = useState([])
   const [displayData,setDisplayData] = useState({})
@@ -17,11 +18,12 @@ const Map = () => {
   const [pageNumber,setPageNumber] = useState(1)
   const [pageCapacity,setPageCapacity] = useState(500)
   const [totalPages, setTotalPages] = useState(1);
-  const [inputValue1, setInputValue1] = useState("")
-  const [inputValue2,setInputValue2] = useState("")
+  const [nameSearchState,setNameSearchState] = useState(false)
+  const [nameText,setSearchNameText] = useState("")
 
+  const geminiKey = String(process.env.REACT_APP_GOOGLE_KEY)
+  const mapKey = String(process.env.REACT_APP_MAP_KEY)
 
-  const geminiKey = String(process.env.REACT_APP_GEMINI_KEY)
   const ai = new GoogleGenAI({ apiKey: geminiKey });
 
   // This a function that simply generates content from google's LLM in order to display content
@@ -41,7 +43,8 @@ const Map = () => {
 
   // This function called getData() just allows me to fetch my data from my own api that was created with .NET
   async function getData() {
-    const url = `https://localhost:7194/api/crime?page=${pageNumber}&pageSize=${pageCapacity}`;
+
+    const url = nameSearchState != "" ? `https://localhost:7194/api/crime/name?text=${nameText}&page=${pageNumber}&pageSize=${pageCapacity}` :  `https://localhost:7194/api/crime/all?page=${pageNumber}&pageSize=${pageCapacity}`
     try {
       const response = await fetch(url);
       if (!response.ok) {
@@ -60,12 +63,11 @@ const Map = () => {
 
 
 
-
   // This just allows me to use the async function that is currently fetching for my data.
 
   useEffect(()=> {
     getData();
-  },[pageNumber])
+  },[pageNumber,nameText])
 
 
   useEffect(()=> {
@@ -81,16 +83,39 @@ const Map = () => {
     }
   }
 
+  const handleNameSearchChange = (e) => {
+    const value = e.target.value;
+    setSearchNameText(value)
+    setNameSearchState(value.length > 0);
+  }
+
+
+// Anything functions or variables below here are for the map
+
+  
+
 
 
   return (
     <div className='map-page'>
+        <Map
+          style={{width: 1920, height: 1080}}
+          mapStyle={`https://api.maptiler.com/maps/streets/style.json?key=${mapKey}`}
+        />
       <DropDownButton/>
 
       <div className="map-sidebar">
         <div className='map-input-div'>
           <MagnifyingGlass/>
-          <input className="searchInput" type="text" placeholder='Search for crime information here'/>
+          <input 
+
+            className="searchInput" 
+            type="text" 
+            placeholder='Search for crime information here'
+            value={nameText}
+            onChange={handleNameSearchChange}
+
+          />
         </div>
 
         <div className='map-display-info'>
@@ -130,7 +155,7 @@ const Map = () => {
           <input
             placeholder="Page Capacity"
             value = {pageCapacity}
-            onChange={(e) => { const val = Number(e.target.value); setInputValue2(val); setPageCapacity(val) }}
+            onChange={(e) => { const val = Number(e.target.value); setPageCapacity(val) }}
           />
         </div>
         <div className='display-cards-grid' > 
@@ -156,4 +181,4 @@ const Map = () => {
   )
 }
 
-export default Map
+export default MapPage
