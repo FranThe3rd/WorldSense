@@ -10,44 +10,44 @@ namespace WorldData.Controllers
 {
 
 
-    [ApiController]
-    [Route("api/[controller]")]
-    public class CrimeController : ControllerBase
+  [ApiController]
+  [Route("api/[controller]")]
+  public class CrimeController : ControllerBase
+  {
+    private readonly APIContext _context;
+
+    public CrimeController(APIContext context) 
     {
-        private readonly APIContext _context;
-
-        public CrimeController(APIContext context) 
-        {
-            _context = context;
-        }
-
-
-
-        [HttpGet] // This had to be paginated since my database had too many rows, so I couldn't display all of the information which sucks, but it is what it is.
-        public async Task<ActionResult<IEnumerable<CrimeData>>> GetAllCrimeData(int page = 1, int pageSize = 500) 
-        {
-
-            var totalCount = await _context.CrimeDataTable.CountAsync();
-            var totalPages = (int)Math.Ceiling(totalCount / (double)pageSize);
-
-            if (page < 1)
-            {
-                page = 1;
-            }
-            var data = await _context.CrimeDataTable
-                .Skip((page - 1) * pageSize)
-                .Take(pageSize)
-                .ToListAsync();
-
-            return Ok(new
-            {
-               TotalPages = totalPages,                
-               Data = data
-            });
-        }
-
-
-
-
+      _context = context;
     }
+
+
+
+    [HttpGet] // This had to be paginated since my database had too many rows, so I couldn't display all of the information which sucks, but it is what it is.
+      public async Task<ActionResult<IEnumerable<CrimeData>>> GetAllCrimeData(int page = 1, int pageSize = 500) 
+      {
+
+        var totalCount = await _context.CrimeDataTable.CountAsync();
+        var totalPages = (int)Math.Ceiling(totalCount / (double)pageSize);
+
+        if (page < 1)
+        {
+          page = 1;
+        }
+        var data = await _context.CrimeDataTable
+          .Skip((page - 1) * pageSize)
+          .Take(pageSize)
+          .ToListAsync();
+
+        return Ok(new
+            {
+            TotalPages = totalPages,                
+            Data = data
+            });
+      }
+
+
+
+
+  }
 }
