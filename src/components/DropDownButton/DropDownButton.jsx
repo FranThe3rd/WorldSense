@@ -43,7 +43,7 @@ const DropDownButton = () => {
     </div>
     <div title="option-3">
       <input id="option-3" name="option" type="radio" />
-      <label role='button' onClick={()=> navigate("/restaurants-page")} className="option" for="option-1" data-txt="Restaurants Based in USA"></label>
+      <label role='button' onClick={()=> navigate("/restaurants-page")} className="option" for="option-1" data-txt="Restaurants Mostly Based in USA"></label>
     </div>
   </div>
 </div>
