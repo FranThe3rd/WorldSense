@@ -8,7 +8,11 @@ import ArtificialButton from '../../components/ArtificalButton/ArtificialButton'
 import DropDownButton from '../../components/DropDownButton/DropDownButton';
 import { GoogleGenAI } from "@google/genai";
 import Markdown from 'react-markdown'
-import {DeckGL} from '@deck.gl/react';
+
+import { MapContainer, TileLayer, Marker, Popup, Circle, Polygon, useMapEvents } from 'react-leaflet';
+import 'leaflet/dist/leaflet.css';
+
+import 'leaflet/dist/leaflet.css';
 const MapPage = () => {
 
   const [apiData,setData] = useState([])
@@ -92,16 +96,36 @@ const MapPage = () => {
 
 // Anything functions or variables below here are for the map
 
+const center = [51.505, -0.09]
   
 
 
 
   return (
     <div className='map-page'>
-        <Map
-          style={{width: 1920, height: 1080}}
-          mapStyle={`https://api.maptiler.com/maps/streets/style.json?key=${mapKey}`}
-        />
+    <MapContainer center={center} zoom={13} style={{ height: '100vh', width: '100%' }}>
+      <TileLayer
+        url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
+        attribution='&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+      />
+
+      <Marker position={[51.5, -0.09]}>
+        <Popup>Hello world! I am a popup.</Popup>
+      </Marker>
+
+      <Circle
+        center={[51.508, -0.11]}
+        radius={500}
+        pathOptions={{ color: 'red', fillColor: '#f03', fillOpacity: 0.5 }}
+      >
+        <Popup>I am a circle.</Popup>
+      </Circle>
+
+      <Polygon positions={[[51.509, -0.08], [51.503, -0.06], [51.51, -0.047]]}>
+        <Popup>I am a polygon.</Popup>
+      </Polygon>
+
+    </MapContainer>
       <DropDownButton/>
 
       <div className="map-sidebar">
