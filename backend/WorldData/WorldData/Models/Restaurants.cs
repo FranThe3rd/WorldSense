@@ -2,8 +2,10 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-/* This is the model from my restaurants table from my sql server database, I guess I technically don't need annotation columns for this class
- * since my variable names match the names of my database columns...*/
+/* This is the model from my restaurants table from my sql server database. It's about locations of 380,000 Restaurants Mostly USA Based
+ * I technically don't need annotation columns for this class.  my variable names match the names of my database columns...
+ * Source: https://www.kaggle.com/datasets/kwxdata/380k-restaurants-mostly-usa-based
+ */
 
 namespace WorldData.Models
 {

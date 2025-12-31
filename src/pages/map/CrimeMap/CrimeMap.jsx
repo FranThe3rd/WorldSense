@@ -1,19 +1,30 @@
 import React, { useEffect,useState,useRef} from 'react'
-import Map from 'react-map-gl/maplibre';
-import 'maplibre-gl/dist/maplibre-gl.css';
-import './map.css'
-import { MagnifyingGlass,ArrowLeft,ArrowRight } from 'phosphor-react';
-import CrimeCard from '../../components/CrimeCard/CrimeCard';
-import ArtificialButton from '../../components/ArtificalButton/ArtificialButton';
-import DropDownButton from '../../components/DropDownButton/DropDownButton';
+import './CrimeMap.css'
+import { MagnifyingGlass,ArrowLeft,ArrowRight,House } from 'phosphor-react';
+import CrimeCard from '../../../components/CrimeCard/CrimeCard';
+import ArtificialButton from '../../../components/ArtificalButton/ArtificialButton';
+import DropDownButton from '../../../components/DropDownButton/DropDownButton';
 import { GoogleGenAI } from "@google/genai";
 import Markdown from 'react-markdown'
-
-import { MapContainer, TileLayer, Marker, Popup, Circle, Polygon, useMapEvents } from 'react-leaflet';
-import 'leaflet/dist/leaflet.css';
+import { MapContainer, TileLayer, Marker, Popup, Circle, Polygon, useMapEvents,useMap, CircleMarker } from 'react-leaflet';
 
 import 'leaflet/dist/leaflet.css';
-const MapPage = () => {
+import * as L from 'leaflet';
+
+
+const CrimeMapPage = () => {
+
+// For some stupid reason this makes my css work for the markers...
+// Source - https://stackoverflow.com/a
+// Posted by ghybs
+// Retrieved 2025-12-31, License - CC BY-SA 4.0
+delete L.Icon.Default.prototype._getIconUrl;
+
+  L.Icon.Default.mergeOptions({
+  iconRetinaUrl: require('leaflet/dist/images/marker-icon-2x.png'),
+  iconUrl: require('leaflet/dist/images/marker-icon.png'),
+  shadowUrl: require('leaflet/dist/images/marker-shadow.png'),
+});
 
   const [apiData,setData] = useState([])
   const [displayData,setDisplayData] = useState({})
@@ -24,6 +35,7 @@ const MapPage = () => {
   const [totalPages, setTotalPages] = useState(1);
   const [nameSearchState,setNameSearchState] = useState(false)
   const [nameText,setSearchNameText] = useState("")
+  const [flyPosition, setFlyPosition] = useState(null);
 
   const geminiKey = String(process.env.REACT_APP_GOOGLE_KEY)
   const mapKey = String(process.env.REACT_APP_MAP_KEY)
@@ -67,18 +79,14 @@ const MapPage = () => {
 
 
 
-  // This just allows me to use the async function that is currently fetching for my data.
+  // This just allows me to use the async function that is currently fetching for my data. It also updates depending when my pageNumber changes, or the text on searchbar
 
   useEffect(()=> {
     getData();
   },[pageNumber,nameText])
 
 
-  useEffect(()=> {
-    console.log(showInfoState)
-  },[showInfoState])
-
-
+  // This prevents my api from getting errors since it can't take negative values, so whenever the page is lessthan or equal to one, it returns 1
   const decrementPage = () => {
     if (pageNumber <= 1) {
       setPageNumber(1)
@@ -94,38 +102,52 @@ const MapPage = () => {
   }
 
 
-// Anything functions or variables below here are for the map
+  // Any functions or variables below here are for the map
 
-const center = [51.505, -0.09]
-  
+  const center = [51.505, -0.09] // This is the starting location of the map
+
+
+
+
+  // This function allows you to fly directly to the location of the card you selected
+
+  const FlyToMarker = ({ position }) => {
+    const map = useMap(); 
+
+    if (position) {
+      map.flyTo(position, 16, { duration: 1.5 });  }
+
+    return null;
+  };
+
 
 
 
   return (
     <div className='map-page'>
-    <MapContainer center={center} zoom={13} style={{ height: '100vh', width: '100%' }}>
-      <TileLayer
-        url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
-        attribution='&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-      />
+      <MapContainer center={center} zoom={13} style={{ height: '100vh', width: '100%' }}>
+        <TileLayer
+          url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
+          attribution='&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        />
 
-      <Marker position={[51.5, -0.09]}>
-        <Popup>Hello world! I am a popup.</Popup>
-      </Marker>
+        {apiData && apiData.map((crime, index) => (
+          <Marker
+            key={index} 
+            position={[crime.latitude, crime.longitude]}
+          >
+            <Popup>
+              <div>
+                <h3>{crime.crimeCodeDesc}</h3>
+                <p>{crime.location}</p>
+                <p>{crime.dateOccurred}</p>
+              </div>
+            </Popup>
+          </Marker>
+        ))}
 
-      <Circle
-        center={[51.508, -0.11]}
-        radius={500}
-        pathOptions={{ color: 'red', fillColor: '#f03', fillOpacity: 0.5 }}
-      >
-        <Popup>I am a circle.</Popup>
-      </Circle>
-
-      <Polygon positions={[[51.509, -0.08], [51.503, -0.06], [51.51, -0.047]]}>
-        <Popup>I am a polygon.</Popup>
-      </Polygon>
-
-    </MapContainer>
+        {flyPosition && <FlyToMarker position={flyPosition} />}
+      </MapContainer>
       <DropDownButton/>
 
       <div className="map-sidebar">
@@ -135,7 +157,7 @@ const center = [51.505, -0.09]
 
             className="searchInput" 
             type="text" 
-            placeholder='Search for crime information here'
+            placeholder='Search for specific crimes here'
             value={nameText}
             onChange={handleNameSearchChange}
 
@@ -160,7 +182,8 @@ const center = [51.505, -0.09]
                   :
                   <Markdown>{artificialExplanation}</Markdown>
               }
-            </ul>          </div>
+            </ul>          
+          </div>
 
         </div>
         <div className="map-page-buttons">
@@ -192,7 +215,7 @@ const center = [51.505, -0.09]
               subject={item.crimeCodeDesc}
               location={item.location}
               date={item.dateOccurred}
-              onClick={()=>{setDisplayData(item);setShowInfoState(false); setArtificialExplanation("")}}
+              onClick={()=>{setDisplayData(item);setShowInfoState(false); setArtificialExplanation("");setFlyPosition([parseFloat(item.latitude), parseFloat(item.longitude)])}}
             />
           ))}
 
@@ -201,8 +224,14 @@ const center = [51.505, -0.09]
       </div>
 
 
+      
+
+
+      
+
+
     </div>
   )
 }
 
-export default MapPage
+export default CrimeMapPage

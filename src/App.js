@@ -1,8 +1,9 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/home/home';
 import Navbar from './components/Navbar/Navbar.jsx'
-import MapPage from './pages/map/map.jsx';
-import Test from './pages/test/test.jsx'
+import CrimeMapPage from './pages/map/CrimeMap/CrimeMap.jsx';
+
+import 'leaflet/dist/leaflet.css';
 import './App.css'
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
       <Navbar/>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/map-page" element={<MapPage />} />
+        <Route path="/map-page" element={<CrimeMapPage />} />
         
       </Routes>
     </Router>

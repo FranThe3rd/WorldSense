@@ -2,7 +2,10 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-/* This is the model for my Electric Vehicle Population Data table from my sql server database */
+/* This is the model for my Electric Vehicle Population Data table from my sql server database.
+ * It's about the locations of all electric vehicles, which includes their VIN number and more.
+ * Source: https://catalog.data.gov/dataset/electric-vehicle-population-data
+ */
 
 namespace WorldData.Models
 {

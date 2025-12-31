@@ -2,7 +2,10 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-/* This is the model for my Crime Data from 2020 to Present table from my sql server database */
+/* This is the model for my Crime Data from 2020 to Present table from my sql server database.
+ * It's about Crime Data from Los Angeles, California, from 2020 to Present.
+ * Source: https://catalog.data.gov/dataset/crime-data-from-2020-to-present
+ */
 
 
 namespace WorldData.Models
