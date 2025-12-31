@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react'
-import './ElectricMap.css'
+import './RestaurantMap.css'
 import { MagnifyingGlass, ArrowLeft, ArrowRight, House } from 'phosphor-react';
 import CrimeCard from '../../../components/CrimeCard/CrimeCard';
 import ArtificialButton from '../../../components/ArtificalButton/ArtificialButton';
@@ -12,7 +12,7 @@ import 'leaflet/dist/leaflet.css';
 import * as L from 'leaflet';
 
 
-const ElectricMapPage = () => {
+const RestaurantMapPage = () => {
 
   // For some stupid reason this makes my css work for the markers...
   // Source - https://stackoverflow.com/a
@@ -46,7 +46,7 @@ const ElectricMapPage = () => {
   async function main() {
     const response = await ai.models.generateContent({
       model: "gemini-2.5-flash-lite",
-      contents: `Give detailed information as a ai analyzer, zero pleasantries on this information and state your name as "WorldSense AI Anaylzer, try to explain it in detail first give summary what it's about in a couple of sentence and take a deep dive on the information, data: ${JSON.stringify(displayData)}`,
+      contents: `State your name as "WorldSense AI Anaylzer, try to explain it in detail first give summary what it's about in a couple of sentence and explain the information as if you were talking to a person in a conversation, you don't have to explain each field just explain what it is, data: ${JSON.stringify(displayData)}`,
 
     });
     console.log(response.text);
@@ -60,7 +60,7 @@ const ElectricMapPage = () => {
   // This function called getData() just allows me to fetch my data from my own api that was created with .NET
   async function getData() {
 
-    const url = nameSearchState != "" ? `https://localhost:7194/api/electricvehicles/name?text=${nameText}&page=${pageNumber}&pageSize=${pageCapacity}` : `https://localhost:7194/api/electricvehicles/all?page=${pageNumber}&pageSize=${pageCapacity}`
+    const url = nameSearchState != "" ? `https://localhost:7194/api/restaurant/name?text=${nameText}&page=${pageNumber}&pageSize=${pageCapacity}` : `https://localhost:7194/api/restaurant/all?page=${pageNumber}&pageSize=${pageCapacity}`
     try {
       const response = await fetch(url);
       if (!response.ok) {
@@ -125,26 +125,27 @@ const ElectricMapPage = () => {
 
 
   return (
-    <div className='electric-map-page'>
+    <div className='restaurant-map-page'>
       <MapContainer center={center} zoom={13} style={{ height: '100vh', width: '100%' }}>
         <TileLayer
           url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
           attribution='&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         />
 
-        {apiData && apiData.map((electric, index) => {
-          const coords = electric.vehicleLocation.replace("POINT (", "").replace(")", "").split(" ");
-          const lng = parseFloat(coords[0]);
-          const lat = parseFloat(coords[1]);
-          if (isNaN(lat) || isNaN(lng)) return null;
+        {apiData && apiData.map((restaurant, index) => {
+          
 
           return (
-            <Marker key={index} position={[lat, lng]}>
+            <Marker key={index} position={[restaurant.latitude, restaurant.longitude]}>
               <Popup>
                 <div>
-                  <h3>{`${electric.modelYear} ${electric.make} ${electric.model}`}</h3>
-                  <p>{electric.electricVehicleType}</p>
-                  <p>{`${electric.county}, ${electric.city}, ${electric.state} ${electric.postalCode}`}</p>
+                  <h3>{restaurant.title}</h3>
+                  <p>{`Rating: ${restaurant.rating}`}</p>
+                    <p>{restaurant.category}</p>
+                    <p>{restaurant.address}</p>
+
+
+
                 </div>
               </Popup>
             </Marker>
@@ -155,12 +156,12 @@ const ElectricMapPage = () => {
       </MapContainer>
       <DropDownButton />
 
-      <div className="electric-map-sidebar">
-        <div className='electric-map-input-div'>
+      <div className="restaurant-map-sidebar">
+        <div className='restaurant-map-input-div'>
           <MagnifyingGlass />
           <input
 
-            className="electric-searchInput"
+            className="restaurant-searchInput"
             type="text"
             placeholder='Search for specific crimes here'
             value={nameText}
@@ -169,18 +170,18 @@ const ElectricMapPage = () => {
           />
         </div>
 
-        <div className='electric-map-display-info'>
-          <div className='electric-display-button-div'>
+        <div className='restaurant-map-display-info'>
+          <div className='restaurant-display-button-div'>
             <ArtificialButton
               onClick={() => { setShowInfoState(!showInfoState); main() }}
               checked={showInfoState}
             /></div>
-          <div className="electric-display-information">
+          <div className="restaurant-display-information">
             <ul>
               {
                 !showInfoState ?
                   Object.entries(displayData).map(([key, value]) => (
-                    <li className="electric-data-card" key={key}>
+                    <li className="restaurant-data-card" key={key}>
                       {key} : {value}
                     </li>
                   ))
@@ -191,7 +192,7 @@ const ElectricMapPage = () => {
           </div>
 
         </div>
-        <div className="electric-map-page-buttons">
+        <div className="restaurant-map-page-buttons">
 
           <button onClick={() => decrementPage()} className="left-button"><ArrowLeft color='white' /></button>
 
@@ -210,17 +211,17 @@ const ElectricMapPage = () => {
             onChange={(e) => { const val = Number(e.target.value); setPageCapacity(val) }}
           />
         </div>
-        <div className='electric-display-cards-grid' >
+        <div className='restaurant-display-cards-grid' >
 
           {apiData.map((item, index) => (
 
             <CrimeCard
               key={index}
-              className="electric-card"
-              subject={`${item.modelYear} ${item.make} ${item.model}`}
-              location={item.electricVehicleType}
-              date={`${item.county}, ${item.city}, ${item.state} ${item.postalCode}`}
-              onClick={() => { setDisplayData(item); setShowInfoState(false); setArtificialExplanation(""); const coords = item.vehicleLocation.replace("POINT (", "").replace(")", "").split(" "); const lng = parseFloat(coords[0]);const lat = parseFloat(coords[1]); setFlyPosition([lat, lng]); }}
+              className="restaurant-card"
+              subject={item.title}
+              location={item.title}
+              date={item.title}
+              onClick={() => { setDisplayData(item); setShowInfoState(false); setArtificialExplanation("");setFlyPosition([parseFloat(item.latitude), parseFloat(item.longitude)]); }}
             />
           ))}
 
@@ -239,4 +240,4 @@ const ElectricMapPage = () => {
   )
 }
 
-export default ElectricMapPage
+export default RestaurantMapPage

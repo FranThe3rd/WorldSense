@@ -7,10 +7,10 @@ using System.ComponentModel.DataAnnotations.Schema;
  * Source: https://www.kaggle.com/datasets/kwxdata/380k-restaurants-mostly-usa-based
  */
 
-namespace WorldData.Models
+namespace WorldData.Entities
 {
     [Table("380K_US_Restaurants")]
-    public class Restaurants
+    public class RestaurantEntity
     {
         [Key]
         [Column("Id")]

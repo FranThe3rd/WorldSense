@@ -7,10 +7,10 @@ using System.ComponentModel.DataAnnotations.Schema;
  * Source: https://catalog.data.gov/dataset/electric-vehicle-population-data
  */
 
-namespace WorldData.Models
+namespace WorldData.Entities
 {
     [Table("Electric_Vehicle_Population_Data")]
-    public class ElectricVehiclePopulationData
+    public class ElectricVehiclePopulationEntity
     {
         [Key]
         [Column("Id")]

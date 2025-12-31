@@ -8,10 +8,10 @@ using System.ComponentModel.DataAnnotations.Schema;
  */
 
 
-namespace WorldData.Models
+namespace WorldData.Entities
 {
     [Table("Crime_Data_from_2020_to_Present")]
-    public class CrimeData
+    public class CrimeEntity
     {
         [Key]
         [Column("DR_NO")]

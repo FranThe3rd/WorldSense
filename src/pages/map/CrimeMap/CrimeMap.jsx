@@ -148,7 +148,7 @@ delete L.Icon.Default.prototype._getIconUrl;
 
         {flyPosition && <FlyToMarker position={flyPosition} />}
       </MapContainer>
-      <DropDownButton/>
+      <DropDownButton/> 
 
       <div className="map-sidebar">
         <div className='map-input-div'>
@@ -210,7 +210,7 @@ delete L.Icon.Default.prototype._getIconUrl;
           {apiData.map((item,index)=> (
 
             <CrimeCard
-              key={item.index}
+              key={index}
               className="crime-card"
               subject={item.crimeCodeDesc}
               location={item.location}

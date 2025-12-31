@@ -38,7 +38,7 @@ export const Home = () => {
           animate={{y:0,opacity: 1}}
           transition={{duration:0.5,delay:0.7 }}
         >
-          World Sense is an interactive, map-based platform that brings together public data from multiple trusted sources. Explore FBI Most Wanted listings, crime statistics, and other real-world information, all visualized on a single interactive map to help you better understand what’s happening around you in real time.
+          World Sense is an interactive, map-based platform that brings together public data from multiple trusted sources. Explore locations of restaurants, crime statistics, and other real-world information, all visualized on a single interactive map to help you better understand what’s happening around you in real time.
         </motion.p>
         <motion.div className='home-button-div'
 
@@ -49,7 +49,7 @@ export const Home = () => {
             className='get-started-btn'
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.8 }}
-            onClick={()=> navigate('map-page')}
+            onClick={()=> navigate('/restaurants-page')}
           >Get Started</motion.button>
           <motion.button
             className='signup-btn'
@@ -70,7 +70,7 @@ export const Home = () => {
 
         <button
           onClick={() => buttonActive("fbi")}
-          className={`topic1 ${active === "fbi" ? "activeTopic" : ""}`}><h1>FBI Most Wanted</h1></button>
+          className={`topic1 ${active === "fbi" ? "activeTopic" : ""}`}><h1>Restaurants Locations</h1></button>
         <button
           onClick={() => buttonActive("electric")}
           className={`topic1 ${active === "electric" ? "activeTopic" : ""}`}

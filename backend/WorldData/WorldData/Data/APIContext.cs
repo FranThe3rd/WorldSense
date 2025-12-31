@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using WorldData.Models;
+using WorldData.Entities;
 
 
 namespace WorldData.Data
@@ -10,9 +10,9 @@ namespace WorldData.Data
             : base(options)
         {
         }
-        public DbSet<CrimeData> CrimeDataTable { get; set; } = null!;
-        public DbSet<ElectricVehiclePopulationData> EletricDataTable { get; set; } = null!;
-        public DbSet<Restaurants> RestaurantTable { get; set; } = null!;
+        public DbSet<CrimeEntity> CrimeDataContext { get; set; } = null!;
+        public DbSet<ElectricVehiclePopulationEntity> EletricDataContext { get; set; } = null!;
+        public DbSet<RestaurantEntity> RestaurantDataContext { get; set; } = null!;
 
     }
 }

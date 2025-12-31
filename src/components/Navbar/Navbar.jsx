@@ -44,7 +44,7 @@ function Navbar() {
                         <li className="nav-item">
               <NavLink
                 exact
-                to="/map-page"
+                to="/restaurants-page"
                 activeClassName="active"
                 className="nav-links"
                 onClick={handleClick}

@@ -1,12 +1,17 @@
 import React from 'react'
 import './DropDownButton.css'
+import { useNavigate } from 'react-router-dom'
 
 const DropDownButton = () => {
+  const navigate = useNavigate();
+
+
+
   return (
     <div className="select">
   <div
     className="selected"
-    data-default="All"
+    data-default="Select Topic"
     data-one="option-1"
     data-two="option-2"
     data-three="option-3"
@@ -25,19 +30,20 @@ const DropDownButton = () => {
   <div className="options">
     <div title="all">
   <input id="all" name="option" type="radio" defaultChecked />
-  <label className="option" htmlFor="all" data-txt="All"></label>
+  <label  className="option" htmlFor="all" data-txt="Select Topic"></label>
 </div>
     <div title="option-1">
       <input id="option-1" name="option" type="radio" />
-      <label className="option" for="option-1" data-txt="option-1"></label>
+            <label role='button' onClick={()=> navigate("/map-page")} className="option" for="option-2" data-txt="Crime in Los Angeles (2020-2025)"></label>
+
     </div>
     <div title="option-2">
       <input id="option-2" name="option" type="radio" />
-      <label className="option" for="option-2" data-txt="option-2"></label>
+      <label role='button' onClick={()=> navigate("/electric-page")} className="option" for="option-1" data-txt="Electric Vehicle Population Data"></label>
     </div>
     <div title="option-3">
       <input id="option-3" name="option" type="radio" />
-      <label className="option" for="option-3" data-txt="option-3"></label>
+      <label role='button' onClick={()=> navigate("/restaurants-page")} className="option" for="option-1" data-txt="Restaurants Based in USA"></label>
     </div>
   </div>
 </div>

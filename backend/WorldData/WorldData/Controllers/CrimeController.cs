@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
 using WorldData.Data;
-using WorldData.Models;
+using WorldData.Entities;
 
 
 
@@ -24,17 +24,17 @@ namespace WorldData.Controllers
 
 
     [HttpGet("all")] // This had to be paginated since my database had too many rows, so I couldn't display all of the information which sucks, but it is what it is.
-      public async Task<ActionResult<IEnumerable<CrimeData>>> GetAllCrimeData(int page = 1, int pageSize = 500) 
+      public async Task<ActionResult<IEnumerable<CrimeEntity>>> GetAllCrimeData(int page = 1, int pageSize = 500) 
       {
 
-        var totalCount = await _context.CrimeDataTable.CountAsync();
+        var totalCount = await _context.CrimeDataContext.CountAsync();
         var totalPages = (int)Math.Ceiling(totalCount / (double)pageSize);
 
         if (page < 1)
         {
           page = 1;
         }
-        var data = await _context.CrimeDataTable
+        var data = await _context.CrimeDataContext
           .Skip((page - 1) * pageSize)
           .Take(pageSize)
           .ToListAsync();
@@ -47,12 +47,12 @@ namespace WorldData.Controllers
       }
 
     [HttpGet("name")]
-    public async Task<ActionResult<IEnumerable<CrimeData>>> GetCrimeByName(string text,int page = 1, int pageSize=500) {
+    public async Task<ActionResult<IEnumerable<CrimeEntity>>> GetCrimeByName(string text,int page = 1, int pageSize=500) {
 
-            var totalCount = await _context.CrimeDataTable.CountAsync();
+            var totalCount = await _context.CrimeDataContext.CountAsync();
             var totalPages = (int)Math.Ceiling(totalCount / (double)pageSize);
 
-            var data = await _context.CrimeDataTable
+            var data = await _context.CrimeDataContext
               .Where(c => c.CrimeCodeDesc.Contains(text))
               .Skip((page - 1) * pageSize)
               .Take(pageSize)
