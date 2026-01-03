@@ -162,7 +162,7 @@ const ElectricMapPage = () => {
 
             className="electric-searchInput"
             type="text"
-            placeholder='Search for specific crimes here'
+            placeholder='Search for specific electric vehicles here'
             value={nameText}
             onChange={handleNameSearchChange}
 

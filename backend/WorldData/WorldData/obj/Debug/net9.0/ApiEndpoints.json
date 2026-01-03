@@ -166,27 +166,6 @@
   },
   {
     "ContainingType": "WorldData.Controllers.RestaurantController",
-    "Method": "GetRestaurantsByCategory",
-    "RelativePath": "api/Restaurant/category",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "page",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "pageSize",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "WorldData.Controllers.RestaurantController",
     "Method": "GetRestaurantByName",
     "RelativePath": "api/Restaurant/name",
     "HttpMethod": "GET",

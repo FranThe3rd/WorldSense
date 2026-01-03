@@ -76,6 +76,11 @@
   height: 100%;
   border-bottom: 3px solid transparent;
 }
+
+.not-active {
+  opacity: 0.5;
+  cursor:pointer;
+}
 /* .fa-code {
   margin-left: 1rem;
 } */

@@ -163,7 +163,7 @@ const RestaurantMapPage = () => {
 
             className="restaurant-searchInput"
             type="text"
-            placeholder='Search for specific crimes here'
+            placeholder='Search for specific restaurant names here'
             value={nameText}
             onChange={handleNameSearchChange}
 
@@ -219,8 +219,8 @@ const RestaurantMapPage = () => {
               key={index}
               className="restaurant-card"
               subject={item.title}
-              location={item.title}
-              date={item.title}
+              location={item.category}
+              date={item.address}
               onClick={() => { setDisplayData(item); setShowInfoState(false); setArtificialExplanation("");setFlyPosition([parseFloat(item.latitude), parseFloat(item.longitude)]); }}
             />
           ))}

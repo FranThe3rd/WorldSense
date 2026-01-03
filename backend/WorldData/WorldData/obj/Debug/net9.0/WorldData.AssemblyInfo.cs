@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WorldData")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+edd08783647b0dde5a9ae86312ce0779a918ed3d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+50acf5686bf4c03da3bddb73262ed92705d4889d")]
 [assembly: System.Reflection.AssemblyProductAttribute("WorldData")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WorldData")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

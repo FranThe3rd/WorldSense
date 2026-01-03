@@ -21,7 +21,6 @@ export const Home = () => {
     <div className='home'>
       <div className='home-text-div'>
         <motion.h1 
-
           className='title'
           initial={{y:-10, opacity:0}}
           animate={{y:0,opacity: 1}}

@@ -30,17 +30,7 @@ function Navbar() {
                 Home
               </NavLink>
             </li>
-            <li className="nav-item">
-              <NavLink
-                exact
-                to="/about"
-                activeClassName="active"
-                className="nav-links"
-                onClick={handleClick}
-              >
-                Log In
-              </NavLink>
-            </li>
+
                         <li className="nav-item">
               <NavLink
                 exact
@@ -52,6 +42,9 @@ function Navbar() {
                 Get Started
               </NavLink>
             </li>
+            <li className="nav-item not-active">
+              Log In
+                         </li>
 
           </ul>
           <div className="nav-icon" onClick={handleClick}>
