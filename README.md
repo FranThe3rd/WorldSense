@@ -1,4 +1,3 @@
-Reference:https://www.iwmf.org/our-programs/
 
 # World Sense
 
@@ -29,15 +28,21 @@ World Sense is a web application that lets you explore global datasets. You can 
 ## Screenshots
 
 ### Home Page
+
 ![World Sense Home Page](./src/assets/home-img.jpg)  
 
 ### Map Page
+
 ![World Sense Map Page](./src/assets/map-img.jpg)  
 
-!Reference: [Example Website](./src/assets/home-reference-img.jpg)
+# Inspiration For The FrontEnd
 
-Reference: [Example Website](./src/assets/src/assets/map-reference-img.jpg)
+### Home Page From https://www.iwmf.org/our-programs/
 
+![World Sense Home Page](./src/assets/home-reference-img.jpg)  
+
+### Map Page From https://citizen.com/explore
+![World Sense Home Page](./src/assets/map-reference-img.jpg)  
 ---
 
 ## Setup
