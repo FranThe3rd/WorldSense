@@ -27,8 +27,6 @@ namespace WorldData.Controllers
       public async Task<ActionResult<IEnumerable<CrimeEntity>>> GetAllCrimeData(int page = 1, int pageSize = 500) 
       {
 
-        var totalCount = await _context.CrimeDataContext.CountAsync();
-        var totalPages = (int)Math.Ceiling(totalCount / (double)pageSize);
 
         if (page < 1)
         {
@@ -39,18 +37,11 @@ namespace WorldData.Controllers
           .Take(pageSize)
           .ToListAsync();
 
-        return Ok(new
-            {
-            TotalPages = totalPages,                
-            Data = data
-            });
+        return Ok(data);
       }
 
     [HttpGet("name")]
     public async Task<ActionResult<IEnumerable<CrimeEntity>>> GetCrimeByName(string text,int page = 1, int pageSize=500) {
-
-            var totalCount = await _context.CrimeDataContext.CountAsync();
-            var totalPages = (int)Math.Ceiling(totalCount / (double)pageSize);
 
             var data = await _context.CrimeDataContext
               .Where(c => c.CrimeCodeDesc.Contains(text))
@@ -58,11 +49,7 @@ namespace WorldData.Controllers
               .Take(pageSize)
               .ToListAsync(); ;
 
-        return Ok(new
-        {
-            TotalPages = totalPages,
-            Data = data
-        });
+        return Ok(data);
 
         }
 

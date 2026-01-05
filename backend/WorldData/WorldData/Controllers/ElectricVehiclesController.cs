@@ -28,9 +28,6 @@ namespace WorldData.Controllers
         public async Task<ActionResult<IEnumerable<ElectricVehiclePopulationEntity>>> GetAllElectricVehicleData(int page = 1, int pageSize = 500)
         {
 
-            var totalCount = await _context.EletricDataContext.CountAsync();
-            var totalPages = (int)Math.Ceiling(totalCount / (double)pageSize);
-
             if (page < 1)
             {
                 page = 1;
@@ -40,11 +37,7 @@ namespace WorldData.Controllers
               .Take(pageSize)
               .ToListAsync();
 
-            return Ok(new
-            {
-                TotalPages = totalPages,
-                Data = data
-            });
+            return Ok(data);
         }
 
 
@@ -52,20 +45,13 @@ namespace WorldData.Controllers
         public async Task<ActionResult<IEnumerable<ElectricVehiclePopulationEntity>>> GetElectricVehicleByName(string text, int page = 1, int pageSize = 500)
         {
 
-            var totalCount = await _context.EletricDataContext.CountAsync();
-            var totalPages = (int)Math.Ceiling(totalCount / (double)pageSize);
-
             var data = await _context.EletricDataContext
               .Where(c => c.Make.Contains(text))
               .Skip((page - 1) * pageSize)
               .Take(pageSize)
               .ToListAsync(); ;
 
-            return Ok(new
-            {
-                TotalPages = totalPages,
-                Data = data
-            });
+            return Ok(data);
 
         }
 

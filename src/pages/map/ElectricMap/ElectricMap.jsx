@@ -32,7 +32,6 @@ const ElectricMapPage = () => {
   const [showInfoState, setShowInfoState] = useState(false)
   const [pageNumber, setPageNumber] = useState(1)
   const [pageCapacity, setPageCapacity] = useState(500)
-  const [totalPages, setTotalPages] = useState(1);
   const [nameSearchState, setNameSearchState] = useState(false)
   const [nameText, setSearchNameText] = useState("")
   const [flyPosition, setFlyPosition] = useState(null);
@@ -60,7 +59,8 @@ const ElectricMapPage = () => {
   // This function called getData() just allows me to fetch my data from my own api that was created with .NET
   async function getData() {
 
-    const url = nameSearchState != "" ? `https://localhost:7194/api/electricvehicles/name?text=${nameText}&page=${pageNumber}&pageSize=${pageCapacity}` : `https://localhost:7194/api/electricvehicles/all?page=${pageNumber}&pageSize=${pageCapacity}`
+    const url = nameSearchState != "" ? `https://worlddataapi-agcgfcecgfdxhte3.centralus-01.azurewebsites.net/api/electricvehicles/name?text=${nameText}&page=${pageNumber}&pageSize=${pageCapacity}` :  
+      `https://worlddataapi-agcgfcecgfdxhte3.centralus-01.azurewebsites.net/api/electricvehicles/all?page=${pageNumber}&pageSize=${pageCapacity}`
     try {
       const response = await fetch(url);
       if (!response.ok) {
@@ -69,8 +69,7 @@ const ElectricMapPage = () => {
 
       const result = await response.json();
       console.log(result)
-      setData(result.data)
-      setTotalPages(result.totalPages)
+      setData(result)
       console.log("My data array", apiData)
     } catch (error) {
       console.error(error.message);
@@ -195,7 +194,7 @@ const ElectricMapPage = () => {
 
           <button onClick={() => decrementPage()} className="left-button"><ArrowLeft color='white' /></button>
 
-          <p>{pageNumber}/{totalPages}</p>
+          <p>{pageNumber}</p>
           <button onClick={() => setPageNumber(pageNumber + 1)} className="right-button"><ArrowRight color='white' /></button>
           <input
             placeholder="Page Number"

@@ -3,6 +3,38 @@
   "WorkspaceRootPath": "C:\\Users\\franc\\OneDrive\\Documents\\IMPORTANT\\WorldSense\\backend\\WorldData\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{0A81E7AE-46F9-4E52-A5B3-430918873E2B}|WorldData\\WorldData.csproj|c:\\users\\franc\\onedrive\\documents\\important\\worldsense\\backend\\worlddata\\worlddata\\controllers\\restaurantcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A81E7AE-46F9-4E52-A5B3-430918873E2B}|WorldData\\WorldData.csproj|solutionrelative:worlddata\\controllers\\restaurantcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A81E7AE-46F9-4E52-A5B3-430918873E2B}|WorldData\\WorldData.csproj|c:\\users\\franc\\onedrive\\documents\\important\\worldsense\\backend\\worlddata\\worlddata\\controllers\\electricvehiclescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A81E7AE-46F9-4E52-A5B3-430918873E2B}|WorldData\\WorldData.csproj|solutionrelative:worlddata\\controllers\\electricvehiclescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A81E7AE-46F9-4E52-A5B3-430918873E2B}|WorldData\\WorldData.csproj|c:\\users\\franc\\onedrive\\documents\\important\\worldsense\\backend\\worlddata\\worlddata\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0A81E7AE-46F9-4E52-A5B3-430918873E2B}|WorldData\\WorldData.csproj|solutionrelative:worlddata\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A81E7AE-46F9-4E52-A5B3-430918873E2B}|WorldData\\WorldData.csproj|c:\\users\\franc\\onedrive\\documents\\important\\worldsense\\backend\\worlddata\\worlddata\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0A81E7AE-46F9-4E52-A5B3-430918873E2B}|WorldData\\WorldData.csproj|solutionrelative:worlddata\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A81E7AE-46F9-4E52-A5B3-430918873E2B}|WorldData\\WorldData.csproj|c:\\users\\franc\\onedrive\\documents\\important\\worldsense\\backend\\worlddata\\worlddata\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0A81E7AE-46F9-4E52-A5B3-430918873E2B}|WorldData\\WorldData.csproj|solutionrelative:worlddata\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A81E7AE-46F9-4E52-A5B3-430918873E2B}|WorldData\\WorldData.csproj|c:\\users\\franc\\onedrive\\documents\\important\\worldsense\\backend\\worlddata\\worlddata\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A81E7AE-46F9-4E52-A5B3-430918873E2B}|WorldData\\WorldData.csproj|solutionrelative:worlddata\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A81E7AE-46F9-4E52-A5B3-430918873E2B}|WorldData\\WorldData.csproj|c:\\users\\franc\\onedrive\\documents\\important\\worldsense\\backend\\worlddata\\worlddata\\controllers\\crimecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A81E7AE-46F9-4E52-A5B3-430918873E2B}|WorldData\\WorldData.csproj|solutionrelative:worlddata\\controllers\\crimecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A81E7AE-46F9-4E52-A5B3-430918873E2B}|WorldData\\WorldData.csproj|c:\\users\\franc\\onedrive\\documents\\important\\worldsense\\backend\\worlddata\\worlddata\\data\\apicontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A81E7AE-46F9-4E52-A5B3-430918873E2B}|WorldData\\WorldData.csproj|solutionrelative:worlddata\\data\\apicontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0A81E7AE-46F9-4E52-A5B3-430918873E2B}|WorldData\\WorldData.csproj|c:\\users\\franc\\onedrive\\documents\\important\\worldsense\\backend\\worlddata\\worlddata\\entities\\restaurantentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0A81E7AE-46F9-4E52-A5B3-430918873E2B}|WorldData\\WorldData.csproj|solutionrelative:worlddata\\entities\\restaurantentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,22 +45,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{0A81E7AE-46F9-4E52-A5B3-430918873E2B}|WorldData\\WorldData.csproj|c:\\users\\franc\\onedrive\\documents\\important\\worldsense\\backend\\worlddata\\worlddata\\entities\\crimeentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0A81E7AE-46F9-4E52-A5B3-430918873E2B}|WorldData\\WorldData.csproj|solutionrelative:worlddata\\entities\\crimeentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0A81E7AE-46F9-4E52-A5B3-430918873E2B}|WorldData\\WorldData.csproj|c:\\users\\franc\\onedrive\\documents\\important\\worldsense\\backend\\worlddata\\worlddata\\controllers\\restaurantcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0A81E7AE-46F9-4E52-A5B3-430918873E2B}|WorldData\\WorldData.csproj|solutionrelative:worlddata\\controllers\\restaurantcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0A81E7AE-46F9-4E52-A5B3-430918873E2B}|WorldData\\WorldData.csproj|c:\\users\\franc\\onedrive\\documents\\important\\worldsense\\backend\\worlddata\\worlddata\\controllers\\electricvehiclescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0A81E7AE-46F9-4E52-A5B3-430918873E2B}|WorldData\\WorldData.csproj|solutionrelative:worlddata\\controllers\\electricvehiclescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0A81E7AE-46F9-4E52-A5B3-430918873E2B}|WorldData\\WorldData.csproj|c:\\users\\franc\\onedrive\\documents\\important\\worldsense\\backend\\worlddata\\worlddata\\controllers\\crimecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0A81E7AE-46F9-4E52-A5B3-430918873E2B}|WorldData\\WorldData.csproj|solutionrelative:worlddata\\controllers\\crimecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0A81E7AE-46F9-4E52-A5B3-430918873E2B}|WorldData\\WorldData.csproj|c:\\users\\franc\\onedrive\\documents\\important\\worldsense\\backend\\worlddata\\worlddata\\data\\apicontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0A81E7AE-46F9-4E52-A5B3-430918873E2B}|WorldData\\WorldData.csproj|solutionrelative:worlddata\\data\\apicontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,11 +54,63 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\franc\\OneDrive\\Documents\\IMPORTANT\\WorldSense\\backend\\WorldData\\WorldData\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "WorldData\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\franc\\OneDrive\\Documents\\IMPORTANT\\WorldSense\\backend\\WorldData\\WorldData\\appsettings.Development.json",
+              "RelativeToolTip": "WorldData\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-01-05T03:47:37.565Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CrimeController.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\OneDrive\\Documents\\IMPORTANT\\WorldSense\\backend\\WorldData\\WorldData\\Controllers\\CrimeController.cs",
+              "RelativeDocumentMoniker": "WorldData\\Controllers\\CrimeController.cs",
+              "ToolTip": "C:\\Users\\franc\\OneDrive\\Documents\\IMPORTANT\\WorldSense\\backend\\WorldData\\WorldData\\Controllers\\CrimeController.cs",
+              "RelativeToolTip": "WorldData\\Controllers\\CrimeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-24T03:33:58.541Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "ElectricVehiclesController.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\OneDrive\\Documents\\IMPORTANT\\WorldSense\\backend\\WorldData\\WorldData\\Controllers\\ElectricVehiclesController.cs",
+              "RelativeDocumentMoniker": "WorldData\\Controllers\\ElectricVehiclesController.cs",
+              "ToolTip": "C:\\Users\\franc\\OneDrive\\Documents\\IMPORTANT\\WorldSense\\backend\\WorldData\\WorldData\\Controllers\\ElectricVehiclesController.cs",
+              "RelativeToolTip": "WorldData\\Controllers\\ElectricVehiclesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-31T06:29:34.9Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RestaurantController.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\OneDrive\\Documents\\IMPORTANT\\WorldSense\\backend\\WorldData\\WorldData\\Controllers\\RestaurantController.cs",
+              "RelativeDocumentMoniker": "WorldData\\Controllers\\RestaurantController.cs",
+              "ToolTip": "C:\\Users\\franc\\OneDrive\\Documents\\IMPORTANT\\WorldSense\\backend\\WorldData\\WorldData\\Controllers\\RestaurantController.cs",
+              "RelativeToolTip": "WorldData\\Controllers\\RestaurantController.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAgwDcAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-31T07:57:13.147Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "ElectricVehiclePopulationEntity.cs",
               "DocumentMoniker": "C:\\Users\\franc\\OneDrive\\Documents\\IMPORTANT\\WorldSense\\backend\\WorldData\\WorldData\\Entities\\ElectricVehiclePopulationEntity.cs",
               "RelativeDocumentMoniker": "WorldData\\Entities\\ElectricVehiclePopulationEntity.cs",
@@ -50,38 +118,37 @@
               "RelativeToolTip": "WorldData\\Entities\\ElectricVehiclePopulationEntity.cs",
               "ViewState": "AgIAAC0AAAAAAAAAAAAkwAwAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-31T06:25:14.115Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CrimeController.cs",
-              "DocumentMoniker": "C:\\Users\\franc\\OneDrive\\Documents\\IMPORTANT\\WorldSense\\backend\\WorldData\\WorldData\\Controllers\\CrimeController.cs",
-              "RelativeDocumentMoniker": "WorldData\\Controllers\\CrimeController.cs",
-              "ToolTip": "C:\\Users\\franc\\OneDrive\\Documents\\IMPORTANT\\WorldSense\\backend\\WorldData\\WorldData\\Controllers\\CrimeController.cs",
-              "RelativeToolTip": "WorldData\\Controllers\\CrimeController.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAowCYAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-24T03:33:58.541Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-31T06:25:14.115Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "ElectricVehiclesController.cs",
-              "DocumentMoniker": "C:\\Users\\franc\\OneDrive\\Documents\\IMPORTANT\\WorldSense\\backend\\WorldData\\WorldData\\Controllers\\ElectricVehiclesController.cs",
-              "RelativeDocumentMoniker": "WorldData\\Controllers\\ElectricVehiclesController.cs",
-              "ToolTip": "C:\\Users\\franc\\OneDrive\\Documents\\IMPORTANT\\WorldSense\\backend\\WorldData\\WorldData\\Controllers\\ElectricVehiclesController.cs",
-              "RelativeToolTip": "WorldData\\Controllers\\ElectricVehiclesController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAABuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-31T06:29:34.9Z",
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\franc\\OneDrive\\Documents\\IMPORTANT\\WorldSense\\backend\\WorldData\\WorldData\\appsettings.json",
+              "RelativeDocumentMoniker": "WorldData\\appsettings.json",
+              "ToolTip": "C:\\Users\\franc\\OneDrive\\Documents\\IMPORTANT\\WorldSense\\backend\\WorldData\\WorldData\\appsettings.json",
+              "RelativeToolTip": "WorldData\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAACnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-01-05T03:11:09.668Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\franc\\OneDrive\\Documents\\IMPORTANT\\WorldSense\\backend\\WorldData\\WorldData\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "WorldData\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\franc\\OneDrive\\Documents\\IMPORTANT\\WorldSense\\backend\\WorldData\\WorldData\\Properties\\launchSettings.json",
+              "RelativeToolTip": "WorldData\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-01-05T03:47:29.652Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "CrimeEntity.cs",
               "DocumentMoniker": "C:\\Users\\franc\\OneDrive\\Documents\\IMPORTANT\\WorldSense\\backend\\WorldData\\WorldData\\Entities\\CrimeEntity.cs",
               "RelativeDocumentMoniker": "WorldData\\Entities\\CrimeEntity.cs",
@@ -89,38 +156,37 @@
               "RelativeToolTip": "WorldData\\Entities\\CrimeEntity.cs",
               "ViewState": "AgIAAC0AAAAAAAAAAAAkwAoAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-24T04:52:46.108Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-24T04:52:46.108Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "RestaurantController.cs",
-              "DocumentMoniker": "C:\\Users\\franc\\OneDrive\\Documents\\IMPORTANT\\WorldSense\\backend\\WorldData\\WorldData\\Controllers\\RestaurantController.cs",
-              "RelativeDocumentMoniker": "WorldData\\Controllers\\RestaurantController.cs",
-              "ToolTip": "C:\\Users\\franc\\OneDrive\\Documents\\IMPORTANT\\WorldSense\\backend\\WorldData\\WorldData\\Controllers\\RestaurantController.cs",
-              "RelativeToolTip": "WorldData\\Controllers\\RestaurantController.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAwwEYAAAAIAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\OneDrive\\Documents\\IMPORTANT\\WorldSense\\backend\\WorldData\\WorldData\\Program.cs",
+              "RelativeDocumentMoniker": "WorldData\\Program.cs",
+              "ToolTip": "C:\\Users\\franc\\OneDrive\\Documents\\IMPORTANT\\WorldSense\\backend\\WorldData\\WorldData\\Program.cs",
+              "RelativeToolTip": "WorldData\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-31T07:57:13.147Z",
+              "WhenOpened": "2026-01-05T03:16:50.313Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 8,
               "Title": "RestaurantEntity.cs",
               "DocumentMoniker": "C:\\Users\\franc\\OneDrive\\Documents\\IMPORTANT\\WorldSense\\backend\\WorldData\\WorldData\\Entities\\RestaurantEntity.cs",
               "RelativeDocumentMoniker": "WorldData\\Entities\\RestaurantEntity.cs",
               "ToolTip": "C:\\Users\\franc\\OneDrive\\Documents\\IMPORTANT\\WorldSense\\backend\\WorldData\\WorldData\\Entities\\RestaurantEntity.cs",
               "RelativeToolTip": "WorldData\\Entities\\RestaurantEntity.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABMAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-31T06:26:39.726Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "APIContext.cs",
               "DocumentMoniker": "C:\\Users\\franc\\OneDrive\\Documents\\IMPORTANT\\WorldSense\\backend\\WorldData\\WorldData\\Data\\APIContext.cs",
               "RelativeDocumentMoniker": "WorldData\\Data\\APIContext.cs",

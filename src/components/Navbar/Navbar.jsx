@@ -31,7 +31,7 @@ function Navbar() {
               </NavLink>
             </li>
 
-                        <li className="nav-item">
+            <li className="nav-item">
               <NavLink
                 exact
                 to="/restaurants-page"
@@ -44,7 +44,7 @@ function Navbar() {
             </li>
             <li className="nav-item not-active">
               Log In
-                         </li>
+            </li>
 
           </ul>
           <div className="nav-icon" onClick={handleClick}>
@@ -55,10 +55,10 @@ function Navbar() {
                 <HamburgetMenuOpen />{" "}
               </span>
             ) : (
-              <span className="icon">
-                <HamburgetMenuClose />
-              </span>
-            )}
+                <span className="icon">
+                  <HamburgetMenuClose />
+                </span>
+              )}
           </div>
         </div>
       </nav>

@@ -14,17 +14,17 @@ import * as L from 'leaflet';
 
 const CrimeMapPage = () => {
 
-// For some stupid reason this makes my css work for the markers...
-// Source - https://stackoverflow.com/a
-// Posted by ghybs
-// Retrieved 2025-12-31, License - CC BY-SA 4.0
-delete L.Icon.Default.prototype._getIconUrl;
+  // For some stupid reason this makes my css work for the markers...
+  // Source - https://stackoverflow.com/a
+  // Posted by ghybs
+  // Retrieved 2025-12-31, License - CC BY-SA 4.0
+  delete L.Icon.Default.prototype._getIconUrl;
 
   L.Icon.Default.mergeOptions({
-  iconRetinaUrl: require('leaflet/dist/images/marker-icon-2x.png'),
-  iconUrl: require('leaflet/dist/images/marker-icon.png'),
-  shadowUrl: require('leaflet/dist/images/marker-shadow.png'),
-});
+    iconRetinaUrl: require('leaflet/dist/images/marker-icon-2x.png'),
+    iconUrl: require('leaflet/dist/images/marker-icon.png'),
+    shadowUrl: require('leaflet/dist/images/marker-shadow.png'),
+  });
 
   const [apiData,setData] = useState([])
   const [displayData,setDisplayData] = useState({})
@@ -32,7 +32,6 @@ delete L.Icon.Default.prototype._getIconUrl;
   const [showInfoState,setShowInfoState] = useState(false)
   const [pageNumber,setPageNumber] = useState(1)
   const [pageCapacity,setPageCapacity] = useState(500)
-  const [totalPages, setTotalPages] = useState(1);
   const [nameSearchState,setNameSearchState] = useState(false)
   const [nameText,setSearchNameText] = useState("")
   const [flyPosition, setFlyPosition] = useState(null);
@@ -60,7 +59,8 @@ delete L.Icon.Default.prototype._getIconUrl;
   // This function called getData() just allows me to fetch my data from my own api that was created with .NET
   async function getData() {
 
-    const url = nameSearchState != "" ? `https://localhost:7194/api/crime/name?text=${nameText}&page=${pageNumber}&pageSize=${pageCapacity}` :  `https://localhost:7194/api/crime/all?page=${pageNumber}&pageSize=${pageCapacity}`
+    const url = nameSearchState != "" ? `https://worlddataapi-agcgfcecgfdxhte3.centralus-01.azurewebsites.net/api/crime/name?text=${nameText}&page=${pageNumber}&pageSize=${pageCapacity}` :  
+      `https://worlddataapi-agcgfcecgfdxhte3.centralus-01.azurewebsites.net/api/crime/all?page=${pageNumber}&pageSize=${pageCapacity}`
     try {
       const response = await fetch(url);
       if (!response.ok) {
@@ -69,8 +69,7 @@ delete L.Icon.Default.prototype._getIconUrl;
 
       const result = await response.json();
       console.log(result)
-      setData(result.data)
-      setTotalPages(result.totalPages)
+      setData(result)
       console.log("My data array" , apiData)
     } catch (error) {
       console.error(error.message);
@@ -190,7 +189,7 @@ delete L.Icon.Default.prototype._getIconUrl;
 
           <button onClick={()=> decrementPage()} className="left-button"><ArrowLeft color='white'/></button>
 
-          <p>{pageNumber}/{totalPages}</p>
+          <p>{pageNumber}</p>
           <button onClick={()=> setPageNumber(pageNumber+1)}  className="right-button"><ArrowRight color='white'/></button>
           <input
             placeholder="Page Number"
@@ -224,10 +223,10 @@ delete L.Icon.Default.prototype._getIconUrl;
       </div>
 
 
-      
 
 
-      
+
+
 
 
     </div>

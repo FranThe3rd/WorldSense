@@ -10,14 +10,15 @@ builder.Services.AddCors(options =>
     options.AddPolicy(name: MyAllowSpecificOrigins,
                       policy =>
                       {
-                          policy.WithOrigins("http://localhost:3000");
+                          policy.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
                       });
 });
 
 // Add services to the container.
 
 builder.Services.AddControllers();
-builder.Services.AddDbContext<APIContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddDbContext<APIContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"), sql => sql.CommandTimeout(120) // Was only here since it was taking forever to count all of my rows
+));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
