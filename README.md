@@ -33,13 +33,14 @@ World Sense is a web application that lets you explore global datasets. You can 
 
 ### Map Page
 
-![World Sense Map Page](./src/assets/map-img.jpg)  
+![International Women Media Foundation Page](./src/assets/map-img.jpg)  
 
-# Inspiration For The FrontEnd
+# Frontend Inspiration
+
 
 ### Home Page From https://www.iwmf.org/our-programs/
 
-![World Sense Home Page](./src/assets/home-reference-img.jpg)  
+![Citizens Page](./src/assets/home-reference-img.jpg)  
 
 ### Map Page From https://citizen.com/explore
 ![World Sense Home Page](./src/assets/map-reference-img.jpg)  
