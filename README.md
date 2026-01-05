@@ -25,7 +25,7 @@ World Sense is a web application that lets you explore global datasets. You can 
 
 ---
 
-## Screenshots
+## Website Design
 
 ### Home Page
 
